@@ -1,0 +1,40 @@
+
+
+	.counter>span{
+		font-size:25px;
+		margin:2px;
+		overflow:hidden;
+		display:inline-block;
+		width: 20px;
+		height: 30px;
+		position:relative;
+		border: 1px solid black;
+		
+		background: linear-gradient(0deg, #adadad 0%, white 30%, white 70%, #adadad 100%);   	
+	}
+			
+	.counter>span b{
+		position:relative;
+		margin:2px;
+	}
+			
+	.counter b.out{
+		animation: 150ms linear out;
+		animation-fill-mode: forwards;
+	}	
+					
+	.counter b.out.in {
+		animation: 150ms linear in;
+		animation-fill-mode: forwards;
+	}
+			
+	@keyframes out {
+		0%    {top:0; }
+		100%  {top:30;}
+	}
+	
+	@keyframes in {
+		0%   {top:-30;}
+		100% {top:0;}
+	}
+				
