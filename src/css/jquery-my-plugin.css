@@ -14,27 +14,27 @@
 	}
 			
 	.counter>span b{
-		position:relative;
+		position: relative;
 		margin:2px;
 	}
 			
 	.counter b.out{
-		animation: 150ms linear out;
+		animation: 100ms linear out;
 		animation-fill-mode: forwards;
 	}	
 					
 	.counter b.out.in {
-		animation: 150ms linear in;
+		animation: 100ms linear in;
 		animation-fill-mode: forwards;
 	}
 			
 	@keyframes out {
-		0%    {top:0; }
-		100%  {top:30;}
+		0%    {top:0px; }
+		100%  {top:30px; }
 	}
 	
 	@keyframes in {
-		0%   {top:-30;}
-		100% {top:0;}
+		0%   {top:-30px;}
+		100% {top:0px;}
 	}
 				
