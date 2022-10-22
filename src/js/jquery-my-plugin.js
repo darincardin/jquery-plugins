@@ -1,5 +1,16 @@
 
 
+
+
+   /* Converts a number into an array of individual digits */
+   Number.prototype.toArray = function() { return this.toString().split('').map(i=> parseInt(i) ) };
+	
+   /* Converts an array of strings to a single number  */	
+   Array.prototype.toNumber = function() {return parseInt( this.join(""))}  
+
+
+
+
    var defaults = {
       length: 5,
       setTime:12345,
@@ -7,54 +18,54 @@
    };
 
 
-	
-
-
-
    class Counter {
 
-	 counters = new Array(5);
 	 main = null;
-	 options = null;
+	 opts = null;
+	 counters = null;
+	 
 
-     constructor(element, options) {
+     constructor(element, opts) {
 		
-	 	this.options = $.extend(true, {}, defaults, options);		    
-        this.main    = $(element);
-        this._init(); 
+	 	 this.opts      = $.extend(true, {}, defaults, opts);		
+	 	
+	 	 this.counters  = new Array(this.opts.length);   
+	 	    	
+         this.main      = $(element).addClass('counter');					
+		
+	 	 var counterArr = this.opts.setTime.toArray();
+				
+		 for(var i = 0; i <  this.opts.length; i++){		
+			this.counters[i] = counterArr[i] || 0;
+			this.main.append(`<span><b class='${i}'>${this.counters[i]}</b></span>`);
+		 }	 
      }
 
 	 setTime = (v) =>{
+
+		var counterArr = v.toArray();
+											
+		for(var i = (this.opts.length-1) ; i >= 0 ; i--){	
 			
-		var time = v.toString().split('').map(i=> parseInt(i));
-													
-		for(var i = (this.options.length-1) ; i >= 0 ; i--){	
-			
-			var newValue = time.pop() || 0;
+			var newValue = counterArr.pop() || 0;
 
 			if(this.counters[i] != newValue) {			
 				this.counters[i] = newValue;
-				this.animate(i, newValue)			
+				this.animate(i, newValue);		
 			}		
 		}				
-	 }
+	 }  
 	
-	 convert = {
-		toNumber: ()=> {},
-		toArray: (v)=> v.toString().split('').map(i=> parseInt(i))
-		
-	}
 
-	increment = (n = 0) => {
+	 increment = () => {
 
-	
-	    var value = parseInt( this.counters.join(""));     
-	     
-	    value += this.options.increment;
+		var value = this.counters.toNumber()
+		  
+	    value += this.opts.increment;
 	    this.setTime(value);
-	}		
+	 }		
 		
-	animate = (i, newValue )=> {
+	 animate = (i, newValue )=> {
 		var _this = this;
 
 		this.main.find(`.${i}`).prepend(newValue+ " ").addClass('out');
@@ -62,26 +73,14 @@
 		setTimeout(function(){
 			_this.main.find(`.${i}`).html(newValue).removeClass('out')
 		}, 100);
-	}	
+	 }	
 			
-	set =   v=>{ this.setTime(v) }
+	 set =   v=>{ this.setTime(v) }
 		
-	clear = v =>{ this.setTime(0) }
+	 clear = v =>{ this.setTime(0) }
 		
-	reset = v =>{ this.setTime(this.options.setTime) }
+	 reset = v =>{ this.setTime(this.opts.setTime) }
 
-    _init() {
-		 this.main.addClass('counter');		
-				
-		 var time = this.options.setTime.toString().split('').map(i=> parseInt(i));		
-				
-		 for(var i = 0; i <  this.options.length; i++){
-			
-			this.counters[i] = time[i] || 0;
-			this.main.append(`<span><b class='${i}'>${this.counters[i]}</b></span>`)
-			
-		 }
-     }
    }
 
 
@@ -139,9 +138,6 @@
     }
 }(function ($) {
    "use strict";
-
-   // Default Options
-
 
 
 
