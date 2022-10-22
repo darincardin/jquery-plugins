@@ -32,11 +32,7 @@ function build_js(cb) {
             presets: ['@babel/env']
         }))
         .pipe(gulp.dest(DEST_JS))
-        .pipe(uglify({
-            output: {
-                comments: saveLicense
-            }
-        }))
+   
         .pipe(rename({
             suffix: '.min'
         }))
