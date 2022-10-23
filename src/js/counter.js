@@ -3,10 +3,10 @@
 
 
    /* Converts a number into an array of individual digits */
-   Number.prototype.toArray = function() { return this.toString().split('').map(i=> parseInt(i) ) };
+   Number.prototype.toArray = function() { return this.toString().split('').map(i=> parseInt(i) ); }
 	
    /* Converts an array of strings to a single number  */	
-   Array.prototype.toNumber = function() {return parseInt( this.join(""))}  
+   Array.prototype.toNumber = function() {return parseInt( this.join(""));}  
 
 
 
@@ -59,7 +59,7 @@
 
 	 increment = () => {
 
-		var value = this.counters.toNumber()
+		var value = this.counters.toNumber();
 		  
 	    value += this.opts.increment;
 	    this.setTime(value);
@@ -71,15 +71,15 @@
 		this.main.find(`.${i}`).prepend(newValue+ " ").addClass('out');
 					
 		setTimeout(function(){
-			_this.main.find(`.${i}`).html(newValue).removeClass('out')
+			_this.main.find(`.${i}`).html(newValue).removeClass('out');
 		}, 100);
 	 }	
 			
-	 set =   v=>{ this.setTime(v) }
+	 set =   v=>{ this.setTime(v); }
 		
-	 clear = v =>{ this.setTime(0) }
+	 clear = v =>{ this.setTime(0); }
 		
-	 reset = v =>{ this.setTime(this.opts.setTime) }
+	 reset = v =>{ this.setTime(this.opts.setTime); }
 
    }
 

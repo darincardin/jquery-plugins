@@ -2,7 +2,7 @@ node_modules
 /build
 /*.log
 /.settings
-/dist
+
 org.eclipse.*
 .jsdtscope*
 .project

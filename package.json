@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Made with create-jquery-plugin",
   "homepage": "",
+   "main": "dist",
   "license": "MIT",
   "author": "Darin Cardin <darinjaycardin@gmail.com>",
   "repository": "",

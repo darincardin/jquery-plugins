@@ -1,0 +1,33 @@
+.counter>span {
+    font-size: 25px;
+    margin: 2px;
+    overflow: hidden;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    position: relative;
+    border: 1px solid black;
+    background: linear-gradient(0deg, #adadad 0%, white 30%, white 70%, #adadad 100%);
+}
+
+.counter>span b {
+    position: absolute;
+    bottom: 0px;
+    margin: 2px;
+}
+
+.counter b.out {
+    animation: 110ms linear increment;
+    animation-fill-mode: backwards;
+}
+
+@keyframes increment {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: -30px;
+    }
+}
+	
