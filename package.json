@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "Made with create-jquery-plugin",
   "homepage": "",
-   "main": "dist/js/counter.min.js",
+  "main": "dist/js/counter.min.js",
   "license": "MIT",
   "author": "Darin Cardin <darinjaycardin@gmail.com>",
   "repository": "",
   "dependencies": {
+    "babelify": "^10.0.0",
+    "gulp-file-include": "^2.3.0",
     "jquery": ">=1.9.0"
   },
   "scripts": {
-    "save": "git add . & git commit -m 'save' && git push",
     "start": "gulp build && gulp serve",
     "watch": "gulp watch",
     "test": "./node_modules/karma/bin/karma start --single-run",
@@ -38,11 +39,13 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssbeautify": "^2.0.1",
     "gulp-jasmine": "^4.0.0",
     "gulp-jshint": "^2.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jasmine-core": "^3.5.0",
     "jasmine-jquery": "^2.1.1",
@@ -53,6 +56,8 @@
     "karma-jasmine": "^3.1.0",
     "karma-jasmine-jquery": "^0.1.1",
     "karma-spec-reporter": "0.0.32",
+    "sass": "^1.55.0",
     "uglify-save-license": "^0.4.1"
+    
   }
 }

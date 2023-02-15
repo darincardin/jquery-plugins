@@ -1,0 +1,18 @@
+
+	.load-error:after {
+	    position: absolute;
+		top: calc(50% - 34px);
+		left: calc(50% - 22px);
+    	height: 68px;
+    	width: 44px;
+	    content: "\2BBF";  
+	    font-size: 50px; 
+	    color: #838383;
+	    text-align: center;
+	    box-sizing: border-box;
+	    font-family: sans-serif;
+	    line-height: 74px;
+	}
+	
+
+	

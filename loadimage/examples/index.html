@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Load Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./css/loadimage.css" rel="stylesheet" type="text/css" />
+    
+
+</head>
+<body>
+
+	    <div class="small">
+			<div src="/photos/bird.jpg" > </div>		
+			<div src="/photos/birds.jpg" > </div>
+			<div src="/photos/xxxx.jpg" > </div>
+			<div src="/photos/rocks.jpg"  > </div>	
+			<div src="/photos/suncactus.jpg"  > </div>	
+	    </div>
+	    
+		<div class="href">		 	
+			<div src="/photos/moon.jpg" href="/photos/moon-big.jpg"  > </div>
+	    </div>
+
+		<div class="large">		 	
+			<div src="/photos/lizard-big.jpg" > </div>
+	    </div>
+
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+
+	
+
+    <script src="./js/loadimage.js" type="text/javascript"></script>
+
+
+
+
+    <script type="text/javascript">
+    
+    
+        $.fn.loadimageConfig({processLimit:1});  
+   
+		$('.small div').loadimage( {transition: 'opacity 10s', width:"100px", height:"66px",  border: 'solid gray 1px'} );
+		
+		$('.href div').loadimage(  {transition: 'opacity 3s', width:"100px", height:"66px",  border: 'solid blue 1px'} );
+	
+		$('.large div').loadimage( { width:"302px", height:"222px",  border: 'solid black 1px'} );
+
+    </script>
+    
+    
+</body>
+</html>

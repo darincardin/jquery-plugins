@@ -1,0 +1,34 @@
+{
+  "name": "jquery-my-plugin",
+  "version": "1.0.0",
+  "description": "Made with create-jquery-plugin",
+  "homepage": "",
+   "main": "dist/js/counter.min.js",
+  "license": "MIT",
+  "author": "Darin Cardin <darinjaycardin@gmail.com>",
+  "repository": "",
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  },
+  "scripts": {
+    "start": "gulp build && gulp serve",
+    "watch": "gulp watch",
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "lint": "gulp lint"
+  },
+  "keywords": [
+    "util",
+    "create-jquery-plugin",
+    "cli",
+    "jquery",
+    "jquery-plugin",
+    "jquery-plugin-boilerplate",
+    "gulp",
+    "example"
+  ],
+  "devDependencies": {
+
+  }
+}

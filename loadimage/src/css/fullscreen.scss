@@ -1,0 +1,20 @@
+
+.fullscreen{
+	z-index: 10000;
+	position: fixed;
+	top: 0;  bottom: 0;  left: 0;  right: 0;
+		    
+ 	background: #000000cc; 
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}			
+
+
+.fullscreen.load-spinner:after{
+	border-color: white  transparent white  transparent!important;
+}   
+
+.fullscreen.load-error:after{
+		  color: white;
+}   
