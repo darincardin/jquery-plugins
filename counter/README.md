@@ -1,74 +1,62 @@
-# jquery-my-plugin
-#### Made with create-jquery-plugin
+# Counter JQuery Plugin
 
-[![npm version](https://badge.fury.io/js/jquery-my-plugin.svg)](https://www.npmjs.com/package/jquery-my-plugin)
+##### Summary
+This plugin provides a mechanical styled counter. Digits change in a animated, rolling fashion.
 
-Requirements
------
+
+##### Requirements
+
   + [jQuery](http://jquery.com/)
 
-
-Installation
 -----
+##### Installation 
 
-### [NPM](https://www.npmjs.com/package/jquery-my-plugin)
+
 ```bash
-npm install jquery-my-plugin
+npm install darincardin/jquery-plugins
 ```
 
-### [Yarn](https://yarn.pm/jquery-my-plugin)
+##### Commands
+
 ```bash
-yarn add jquery-my-plugin
+# serve with hot reload at localhost:3000
+npm run start
+
+# build for production with minification
+npm run build
 ```
 
-### [CDN - jsDelivr](https://www.jsdelivr.com/package/npm/jquery-my-plugin)
-```html
-<!-- CSS -->
-<link href="https://cdn.jsdelivr.net/npm/jquery-my-plugin/dist/css/jquery-my-plugin.min.css" rel="stylesheet" type="text/css" />
+##### Import Plugin
 
-<!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/jquery-my-plugin/dist/js/jquery-my-plugin.min.js" type="text/javascript"></script>
-```    
-
-### [CDN - UNPKG](https://unpkg.com/browse/jquery-my-plugin/)
-```html
-<!-- CSS -->
-<link href="https://unpkg.com/jquery-my-plugin/dist/css/jquery-my-plugin.min.css" rel="stylesheet" type="text/css" />
-
-<!-- JavaScript -->
-<script src="https://unpkg.com/jquery-my-plugin/dist/js/jquery-my-plugin.min.js" type="text/javascript"></script>
+```javascript
+import 'jquery-plugins/counter/dist/js/counter.js';
+import 'jquery-plugins/counter/dist/css/counter.css';
 ```
 
-Usage
+
+##### Initialize Plugin
+
+```javascript
+ var counter =  $('#element1').counter();
+```
 -----
+##### Configuration
 
-Include CSS
-```html
-<link href="https://cdn.jsdelivr.net/npm/jquery-my-plugin/dist/css/jquery-my-plugin.min.css" rel="stylesheet" type="text/css" />
+The configuration plugin offers the following configurations
+
+
+```javascript
+var opts = {
+   length: 5,
+   setTime:12345,
+   increment:1
+};
+var counter =  $('#element1').counter(opts);
 ```
 
-HTML
-```html
-<div id="element"></div>
-```
-
-Include jQuery
-```html
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-```
-
-Include Plugin JS
-```html
-<script src="https://cdn.jsdelivr.net/npm/jquery-my-plugin/dist/js/jquery-my-plugin.min.js" type="text/javascript"></script>
-```
-Initialize the Plugin
-```js
-$('#element').myPlugin();
-```
-
-License
-----
-MIT
+* length: The about of digits in the counter.
+* setTime: The initial time
+* increment: The increment 
 
 
-Created with :heart: [create-jquery-plugin](https://www.npmjs.com/package/create-jquery-plugin)
+

@@ -1,4 +1,4 @@
-# Load Image Plugin
+# Load Image JQuery Plugin
 
 ##### Summary
 This plugin provides a simple way to bulk load images.
@@ -18,7 +18,7 @@ This plugin provides a simple way to bulk load images.
 
 
 ```bash
-npm install darincardin/loadimage
+npm install darincardin/jquery-plugins
 ```
 
 ##### Commands
@@ -34,22 +34,20 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'loadimage/dist/js/loadimage.js';
-import 'loadimage/dist/css/loadimage.css';
+import 'jquery-plugins/loadimage/dist/js/loadimage.js';
+import 'jquery-plugins/loadimage/dist/css/loadimage.css';
 ```
 
 
 ##### Initialize Plugin
 
 ```html
-<div class="small">
-	<div src="/photos/bird1.jpg" > </div>
-	<div src="/photos/bird2.jpg" > </div>	
-</div>	
+<div src="/photos/bird1.jpg" > </div>
+<div src="/photos/bird2.jpg" > </div>	
 ```
 
 ```javascript
-$('.small div').loadimage();
+$('div').loadimage();
 ```
 -----
 ##### Configuration

@@ -1,8 +1,7 @@
 
 
    var defaults = {
-      processLimit:4,
-    
+      processLimit:4,   
    };
 
    class LoadImage {

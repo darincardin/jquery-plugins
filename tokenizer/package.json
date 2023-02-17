@@ -1,14 +1,14 @@
 {
-  "name": "jquery-my-plugin",
+  "name": "jquery-plugins.tokenizer",
   "version": "1.0.0",
-  "description": "Made with create-jquery-plugin",
+  "description": "Tokenizer widget",
   "homepage": "",
-   "main": "dist/js/counter.min.js",
+   "main": "dist/js/counter.js",
   "license": "MIT",
   "author": "Darin Cardin <darinjaycardin@gmail.com>",
   "repository": "",
   "dependencies": {
-    "jquery": ">=1.9.0"
+
   },
   "scripts": {
     "start": "gulp build && gulp serve",
