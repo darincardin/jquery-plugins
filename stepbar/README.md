@@ -49,9 +49,8 @@ var step = $('#stepbar').stepbar({ index:1, array:array});
 
 ##### Commands
 ```javascript
-#Moves the stepbar to the next step
+''Moves the stepbar to the next step
 step.next()    
-
-#Moves the stepbar to the step specified
+//Moves the stepbar to the step specified
 step.set(2)    
 ```
