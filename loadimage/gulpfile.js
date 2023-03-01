@@ -1,14 +1,12 @@
-// Include the required tools used on tasks
+
 var gulp          = require('gulp'),
-    rename        = require('gulp-rename'),
-    uglify        = require('gulp-uglify'),
-    saveLicense   = require('uglify-save-license'),
     babel         = require("gulp-babel"),
     postcss       = require('gulp-postcss'),
-    cleanCSS      = require('gulp-clean-css'),
-    cssbeautify   = require('gulp-cssbeautify'),
     autoprefixer  = require('autoprefixer'),
+    gp_concat     = require('gulp-concat'),
     del           = require('del');
+
+
 
 
 const sass = require('gulp-sass')(require('sass'));
@@ -22,8 +20,8 @@ var SRC_JS        = 'src/js/*.js';
 var SRC_CSS       = 'src/css/*.scss';
 
 // Specify the Destination folders
-var DEST_JS       = 'dist/js';
-var DEST_CSS      = 'dist/css';
+var DEST       = 'dist';
+var DEST_TOP      = '../dist';
 
 // Example pages
 var EXAMPLE_HTML  = 'examples/*.html';
@@ -32,26 +30,21 @@ var EXAMPLE_HTML  = 'examples/*.html';
 function build_js(cb) {
    gulp.src(SRC_JS)
         .pipe(babel({ presets: ['@babel/env'] }))
-        .pipe(gulp.dest(DEST_JS))
-        .pipe(uglify({ output: { comments: saveLicense }}))  
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(DEST_JS));
+        .pipe(gulp.dest(DEST))
+        .pipe(gulp.dest(DEST_TOP));
   cb();
 }
 
 // BUILD CSS
 function build_css(cb) {
-  gulp.src(SRC_CSS)
+   gulp.src(SRC_CSS)
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss( [autoprefixer()] ))
-        .pipe(cssbeautify({ autosemicolon: true }))
-        .pipe(gulp.dest(DEST_CSS))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(DEST_CSS));
-
  
-   gulp.src(['src/assets/*']).pipe(gulp.dest('dist/assets'));
+        .pipe(gp_concat('loadimage.css'))
+        .pipe(gulp.dest(DEST))
+        .pipe(gulp.dest(DEST_TOP));
+ 
    gulp.src(['src/photos/*']).pipe(gulp.dest('dist/photos'))
 
   cb();
@@ -62,13 +55,13 @@ function build_css(cb) {
 
 // CLEAN
 function clean_js(cb) {
-  del.sync([DEST_JS]);
+  del.sync([DEST]);
 
   cb();
 }
 
 function clean_css(cb) {
-  del.sync([DEST_CSS]);
+  del.sync([DEST]);
 
   cb();
 }
@@ -94,7 +87,7 @@ function serve(cb) {
   gulp.watch(SRC_JS, build_js);
   gulp.watch(SRC_CSS, build_css);
 
-  gulp.watch([DEST_JS, DEST_CSS, EXAMPLE_HTML]).on("change", browserSync.reload);
+  gulp.watch([DEST, EXAMPLE_HTML]).on("change", browserSync.reload);
 
   cb();
 }

@@ -1,1 +1,0 @@
-.fullscreen{z-index:10000;position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);background-repeat:no-repeat;background-position:center center;background-size:contain}.fullscreen.load-spinner:after{border-color:#fff transparent #fff transparent!important}.fullscreen.load-error:after{color:#fff}

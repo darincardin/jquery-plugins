@@ -29,8 +29,8 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'jquery-plugins/counter/dist/js/counter.js';
-import 'jquery-plugins/counter/dist/css/counter.css';
+import 'jquery-plugins/dist/counter.js';
+import 'jquery-plugins/dist/counter.css';
 ```
 
 

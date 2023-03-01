@@ -7,7 +7,7 @@ class Tokenizer {
     HTML = `
 				<div class="tokenizer" >
 					<div>
-						<input  class='form-control error' type="text" value="" />
+						<input  class='form-control' type="text" value="" />
 						<button type="text" class="btn btn-primary" >
 							<span>Add</span>
 			        	</button>

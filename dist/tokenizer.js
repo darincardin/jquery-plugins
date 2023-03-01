@@ -10,7 +10,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var Tokenizer = /*#__PURE__*/_createClass(function Tokenizer(elem, opts) {
   var _this = this;
   _classCallCheck(this, Tokenizer);
-  _defineProperty(this, "HTML", "\n\t\t\t\t<div class=\"tokenizer\" >\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<input  class='form-control error' type=\"text\" value=\"\" />\n\t\t\t\t\t\t<button type=\"text\" class=\"btn btn-primary\" >\n\t\t\t\t\t\t\t<span>Add</span>\n\t\t\t        \t</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"tokens\"></div>\n\t\t\t\t</div>\n\t");
+  _defineProperty(this, "HTML", "\n\t\t\t\t<div class=\"tokenizer\" >\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<input  class='form-control' type=\"text\" value=\"\" />\n\t\t\t\t\t\t<button type=\"text\" class=\"btn btn-primary\" >\n\t\t\t\t\t\t\t<span>Add</span>\n\t\t\t        \t</button>\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"tokens\"></div>\n\t\t\t\t</div>\n\t");
   _defineProperty(this, "elem", null);
   _defineProperty(this, "props", null);
   _defineProperty(this, "onAdd", function () {

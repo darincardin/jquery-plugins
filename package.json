@@ -1,30 +1,41 @@
 {
-  "name": "jquery-my-plugin",
+  "name": "jquery-plugins",
   "version": "1.0.0",
-  "description": "Made with create-jquery-plugin",
+  "description": "Four jQuery Plugins: Counter, LoadImage, Tokenizer, and Stepbar",
   "homepage": "",
-  "main": "loadimage/dist/js/loadimage.js",
+  "main": "dist",
   "license": "MIT",
   "author": "Darin Cardin <darinjaycardin@gmail.com>",
   "repository": "",
   "dependencies": {
-
-
+    "babelify": "^10.0.0",
+    "gulp-file-include": "^2.3.0",
+    "jquery": ">=1.9.0"
   },
   "scripts": {
-    "start": "gulp build && gulp serve",
-    "build": "gulp build"
+    "start:stepbar": "npm run build:stepbar   && gulp serve --gulpfile=stepbar/gulpfile.js",
+    "start:tokenizer": "npm run build:tokenizer && gulp serve --gulpfile=tokenizer/gulpfile.js",
+    "start:counter": "npm run build:counter   && gulp serve --gulpfile=counter/gulpfile.js",
+    "start:loadimage": "npm run build:loadimage && gulp serve --gulpfile=loadimage/gulpfile.js",
+    
+    "build": "npm run build:stepbar && npm run build:tokenizer && npm run build:counter && npm run build:loadimage",
+    "build:stepbar": "gulp build --gulpfile=stepbar/gulpfile.js ",
+    "build:tokenizer": "gulp build --gulpfile=tokenizer/gulpfile.js ",
+    "build:counter": "gulp build --gulpfile=counter/gulpfile.js ",
+    "build:loadimage": "gulp build --gulpfile=loadimage/gulpfile.js ",
+    "clean":"gulp clean --gulpfile=counter/gulpfile.js && gulp clean --gulpfile=loadimage/gulpfile.js && gulp clean --gulpfile=stepbar/gulpfile.js && gulp clean --gulpfile=tokenizer/gulpfile.js ",
+    "watch": "gulp watch"
   },
   "keywords": [
-    "counter",
-    "tokenizer",
     "stepbar",
+    "tokenizer",
     "loadimage",
+    "counter",
     "jquery"
   ],
   "devDependencies": {
-     "gulp-file-include": "^2.3.0",
-    "jquery": ">=1.9.0",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -33,13 +44,10 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssbeautify": "^2.0.1",
-    "gulp-jasmine": "^4.0.0",
-    "gulp-jshint": "^2.1.0",
+
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.55.0",
-    "uglify-save-license": "^0.4.1"   
+    "sass": "^1.55.0"
   }
 }

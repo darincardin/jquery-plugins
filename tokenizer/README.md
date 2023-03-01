@@ -29,8 +29,8 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'jquery-plugins/tokenizer/dist/js/tokenizer.js';
-import 'jquery-plugins/tokenizer/dist/css/tokenizer.css';
+import 'jquery-plugins/dist/tokenizer.js';
+import 'jquery-plugins/dist/tokenizer.css';
 ```
 
 

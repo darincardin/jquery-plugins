@@ -28,8 +28,8 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'jquery-plugins/stepbar/dist/js/stepbar.js';
-import 'jquery-plugins/stepbar/dist/css/stepbar.css';
+import 'jquery-plugins/dist/stepbar.js';
+import 'jquery-plugins/dist/stepbar.css';
 ```
 
 

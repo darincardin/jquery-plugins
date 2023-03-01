@@ -34,8 +34,8 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'jquery-plugins/loadimage/dist/js/loadimage.js';
-import 'jquery-plugins/loadimage/dist/css/loadimage.css';
+import 'jquery-plugins/dist/loadimage.js';
+import 'jquery-plugins/dist/loadimage.css';
 ```
 
 

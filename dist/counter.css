@@ -1,4 +1,4 @@
-.counter>span {
+.counter > span {
     font-size: 25px;
     margin: 2px;
     overflow: hidden;
@@ -10,7 +10,7 @@
     background: linear-gradient(0deg, #adadad 0%, white 30%, white 70%, #adadad 100%);
 }
 
-.counter>span b {
+.counter > span b {
     position: absolute;
     bottom: 0px;
     margin: 2px;
@@ -34,4 +34,3 @@
         bottom: -30px;
     }
 }
-	

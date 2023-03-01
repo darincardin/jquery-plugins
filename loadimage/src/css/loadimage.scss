@@ -1,6 +1,4 @@
-@import "spinner.scss";
-@import "error.scss";
-@import "fullscreen.scss";
+
 
 .loadimage {
 	
@@ -24,7 +22,7 @@
 	img {
 		min-width: 50px;
     	min-height: 50px;
-	
+	    transition: opacity 1s;
 		display:inline-block;	
 		height:inherit;
 		width: inherit;
